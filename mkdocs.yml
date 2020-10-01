@@ -1,0 +1,24 @@
+site_name: Yacht Documentation
+theme:
+  name: material
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Home: index.md
+  - Installation:
+    - 'Requirements' : 'Installation/requirements.md'
+    - 'Yacht' : 'Installation/yacht.md'
+    - 'Getting Started' : 'Installation/gettingstarted.md'
+  - Templates:
+    - 'Templates Explained' : 'Templates/templates.md'
+    - 'Template Variables' : 'Templates/variables.md'
+  - Pages:
+    - 'Dashboard' : 'Pages/dashboard.md'
+    - 'Applications' : 'Pages/applications.md'
+    - 'Templates' : 'Pages/templates.md'
+    - 'Server Settings' : 'Pages/serverSettings.md'
+    - 'User Settings' : 'Pages/userSettings.md'
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
