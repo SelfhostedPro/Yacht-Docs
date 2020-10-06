@@ -311,13 +311,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#install-yacht-via-docker-compse" class="md-nav__link">
-    Install Yacht via docker-compse
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -567,13 +560,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#install-yacht-via-docker-compse" class="md-nav__link">
-    Install Yacht via docker-compse
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -614,24 +600,6 @@ After that you can access Yacht on port 8000 on your server in a web browser.</p
 <p>Now that you have a template added let's deploy an application. Click on your template to view it. Then pick an app to deploy. You can click on view to see any details about the application.</p>
 <p>One you've got an app in mind click on deploy and you'll be taken to the deploy form. Everything should be filled out for you but double check that everything looks correct. Click on continue until you get to the last page and then click on Deploy.</p>
 <p>Now you'll see your running app. You can click on it to view more detailed stats or click on the Arrow to the right of the name to perform an action with it.</p>
-<h2 id="install-yacht-via-docker-compse">Install Yacht via docker-compse</h2>
-<p>The following is an example docker-compose.yml file to deploy Yacht:
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
-<span class="nt">services</span><span class="p">:</span>
-  <span class="nt">yacht</span><span class="p">:</span>
-    <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yacht</span>
-    <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
-    <span class="nt">ports</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">8000:8000</span>
-    <span class="nt">volumes</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">yacht:/config</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/docker.sock:/var/run/docker.sock</span>
-    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">selfhostedpro/yacht</span>
-
-<span class="nt">volumes</span><span class="p">:</span>
-  <span class="nt">yacht</span><span class="p">:</span>
-</code></pre></div></p>
                 
                   
                     

@@ -24,3 +24,23 @@ Once OMV-Extras is installed you'll need to do the following steps:
 3. Once docker is installed click on "Yacht" and then "Install"
 
 Once it's installed you can use the button to open Yacht.
+
+## via Docker Compose
+The following is an example docker-compose.yml file to deploy Yacht:
+```yaml
+---
+version: '3'
+services:
+  yacht:
+    container_name: yacht
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    volumes:
+      - yacht:/config
+      - /var/run/docker.sock:/var/run/docker.sock
+    image: selfhostedpro/yacht
+
+volumes:
+  yacht:
+```

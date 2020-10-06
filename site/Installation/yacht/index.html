@@ -285,6 +285,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#via-docker-compose" class="md-nav__link">
+    via Docker Compose
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -532,6 +539,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#via-docker-compose" class="md-nav__link">
+    via Docker Compose
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -570,6 +584,24 @@ This will start Yacht on port 8000 (change this to 8001 if you're also using por
 <li>Once docker is installed click on "Yacht" and then "Install"</li>
 </ol>
 <p>Once it's installed you can use the button to open Yacht.</p>
+<h2 id="via-docker-compose">via Docker Compose</h2>
+<p>The following is an example docker-compose.yml file to deploy Yacht:
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+  <span class="nt">yacht</span><span class="p">:</span>
+    <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">yacht</span>
+    <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+    <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">8000:8000</span>
+    <span class="nt">volumes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">yacht:/config</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/var/run/docker.sock:/var/run/docker.sock</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">selfhostedpro/yacht</span>
+
+<span class="nt">volumes</span><span class="p">:</span>
+  <span class="nt">yacht</span><span class="p">:</span>
+</code></pre></div></p>
                 
                   
                     
