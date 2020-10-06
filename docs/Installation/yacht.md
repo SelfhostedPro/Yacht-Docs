@@ -9,7 +9,9 @@ docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht
 ```
 This will start Yacht on port 8000 (change this to 8001 if you're also using portainer).
 
-The default credentials are `admin@yacht.local` and `pass`.
+The default login is `admin@yacht.local` and `pass` you should change this immediately by clicking on admin in the top right and then "User" then select "Change Password" in the top menu. You can also change your username using this field.
+
+If you need to reset your password/username to the included defaults, please delete your yacht volume and create a new one (you will lose all of your configurations so be sure to backup when you make changes).
 
 ## via OpenMediaVault
 Installing Yacht via OpenMediaVault can be done through [OMV-Extras](https://omv-extras.org/). Installation instructions for OpenMediaVault can be found [here](https://forum.openmediavault.org/index.php?thread/5549-omv-extras-org-plugin/)
