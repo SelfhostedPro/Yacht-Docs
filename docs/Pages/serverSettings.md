@@ -1,6 +1,6 @@
 # Server Settings
 
-![Server Settings Page](Yacht-ServerSettings.png)
+![Server Settings Page](Images/Yacht-ServerSettings.png)
 
 ## Server Info
 In the server info section you can import and export the configuration of your server. This is limited to templates and template variables.

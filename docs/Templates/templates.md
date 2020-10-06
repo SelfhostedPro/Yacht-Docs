@@ -1,4 +1,4 @@
-# Templates
+# Templates Explained
 This page will go over building a template. The templates are all compatible with portainer v1 templates so you can always check that documentation too. All of the keys (type, name, title, etc.) are optional and will simply be blank if left empty.
 
 Single app templates will be surrounded by `{}` as is standard for .json files. Multi app templates with consist of multiple `{}` sections (separated with a `,` after the `}` (ie. `},`)).

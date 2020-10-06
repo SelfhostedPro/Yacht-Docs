@@ -1,13 +1,17 @@
 site_name: Yacht Documentation
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/git-alt
+  favicon: assets/images/favicon.ico
+  logo: assets/images/logo.svg
 extra_css:
   - stylesheets/extra.css
 nav:
   - Home: index.md
   - Installation:
     - 'Requirements' : 'Installation/requirements.md'
-    - 'Yacht' : 'Installation/yacht.md'
+    - 'Install Yacht' : 'Installation/yacht.md'
     - 'Getting Started' : 'Installation/gettingstarted.md'
   - Templates:
     - 'Templates Explained' : 'Templates/templates.md'
@@ -18,7 +22,23 @@ nav:
     - 'Templates' : 'Pages/templates.md'
     - 'Server Settings' : 'Pages/serverSettings.md'
     - 'User Settings' : 'Pages/userSettings.md'
+  - Advanced:
+    - 'Reverse Proxy' : 'Advanced/proxy.md'
+    - 'ARM (RPI)' : 'Advanced/arm.md'
 
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago
+
+google_analytics:
+  - UA-179798260-1
+  - auto
+
+repo_url: https://github.com/SelfhostedPro/Yacht
+repo_name: SelfhostedPro/Yacht
+edit_uri: "https://github.com/SelfhostedPro/Yacht-Docs/edit/master/docs"
