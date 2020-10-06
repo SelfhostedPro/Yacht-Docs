@@ -331,14 +331,14 @@
         
           <li class="md-nav__item">
   <a href="#type" class="md-nav__link">
-    type
+    type*
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#title" class="md-nav__link">
-    title
+    title*
   </a>
   
 </li>
@@ -366,7 +366,7 @@
         
           <li class="md-nav__item">
   <a href="#image" class="md-nav__link">
-    image
+    image*
   </a>
   
 </li>
@@ -387,7 +387,7 @@
         
           <li class="md-nav__item">
   <a href="#platform" class="md-nav__link">
-    platform
+    platform*
   </a>
   
 </li>
@@ -463,13 +463,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#yaml" class="md-nav__link">
-    YAML
-  </a>
   
 </li>
       
@@ -666,14 +659,14 @@
         
           <li class="md-nav__item">
   <a href="#type" class="md-nav__link">
-    type
+    type*
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#title" class="md-nav__link">
-    title
+    title*
   </a>
   
 </li>
@@ -701,7 +694,7 @@
         
           <li class="md-nav__item">
   <a href="#image" class="md-nav__link">
-    image
+    image*
   </a>
   
 </li>
@@ -722,7 +715,7 @@
         
           <li class="md-nav__item">
   <a href="#platform" class="md-nav__link">
-    platform
+    platform*
   </a>
   
 </li>
@@ -801,13 +794,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#yaml" class="md-nav__link">
-    YAML
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -827,213 +813,69 @@
                 
                 <h1 id="templates-explained">Templates Explained</h1>
 <p>This page will go over building a template. The templates are all compatible with portainer v1 templates so you can always check that documentation too. All of the keys (type, name, title, etc.) are optional and will simply be blank if left empty.</p>
-<p>Single app templates will be surrounded by <code>{}</code> as is standard for .json files. Multi app templates with consist of multiple <code>{}</code> sections (separated with a <code>,</code> after the <code>}</code> (ie. <code>},</code>)).</p>
-<p>More info on writing JSON is available <a href="https://www.tutorialspoint.com/json/json_quick_guide.htm">here</a>
+<p>Single app templates will be surrounded by <code>{}</code> as is standard for .json files. Multi app templates with consist of multiple <code>{}</code> sections (separated with a <code>,</code> after the <code>}</code> (ie. <code>},</code>) surrounded in <code>[]</code>.</p>
+<p>More info on writing JSON is available <a href="https://www.tutorialspoint.com/json/json_quick_guide.htm">here</a></p>
+<p>If you don't like writing in JSON another option is to use YAML. It's automatically converted into JSON in the backend so all of the options are the same.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;App Title&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;container-name&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description.&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;dev/application:latest&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a note&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;Tools&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="s2">&quot;linux&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;restart_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;unless-stopped&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;9091:9091/tcp&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;9090:9090/tcp&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/data&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!localtime&quot;</span>
-      <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;sysctls&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-      <span class="nt">&quot;net.ipv6.conf.all.disable_ipv6&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
-      <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;cap_add&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;NET_ADMIN&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">}</span>
-</code></pre></div></p>
-<h2 id="this-is-what-each-section-does">This is what each section does:</h2>
-<h3 id="type">type</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;type&quot;</span><span class="err">:</span> <span class="mi">1</span><span class="err">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;App Title&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;container-name&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;dev/application:latest&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a note&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Tools&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="s2">&quot;linux&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;restart_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;unless-stopped&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;9091:9091/tcp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;9090:9090/tcp&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/data&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!localtime&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;sysctls&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nt">&quot;net.ipv6.conf.all.disable_ipv6&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;cap_add&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;NET_ADMIN&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 
-<p>This currently isn't in use. It's just here to keep compatibility with portainer but is ignored.</p>
-<h3 id="title">title</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;title&quot;</span><span class="err">:</span> <span class="s2">&quot;Transmission-OpenVPN&quot;</span><span class="err">,</span>
-</code></pre></div>
-
-<p>This is what is displayed when in the apps list page. Punctuation is nice here and adds to the polish</p>
-<h3 id="name">name</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;name&quot;</span><span class="err">:</span> <span class="s2">&quot;transmission-openvpn&quot;</span><span class="err">,</span>
-</code></pre></div>
-
-<p>This is what the actual container is named. Information on this is <a href="https://docs.docker.com/engine/reference/run/#name---name">here</a>.</p>
-<h3 id="description">description</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;description&quot;</span><span class="err">:</span> <span class="s2">&quot;This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.&quot;</span><span class="err">,</span>
-</code></pre></div>
-
-<p>This is the description that is shown in the app list. <code>\n</code> is interpreted as a newline character</p>
-<h3 id="logo">logo</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;logo&quot;</span><span class="err">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png&quot;</span><span class="err">,</span>
-</code></pre></div>
-
-<p>This is the logo that is show in the app list.</p>
-<h3 id="image">image</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;image&quot;</span><span class="err">:</span> <span class="s2">&quot;haugene/transmission-openvpn:latest&quot;</span><span class="err">,</span>
-</code></pre></div>
-
-<p>This is the image that's pulled from dockerhub. The tag (<code>:latest</code>) is optional.</p>
-<h3 id="note">note</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;note&quot;</span><span class="err">:</span> <span class="s2">&quot;List of supported providers available &lt;a href=&#39;https://haugene.github.io/docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.&quot;</span><span class="err">,</span>
-</code></pre></div>
-
-<p>This is shown when someone clicks on "VIEW" in the app list. It will render HTML appropriately.</p>
-<h3 id="categories">categories</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;categories&quot;</span><span class="err">:</span> <span class="p">[</span>
-      <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;VPN&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;Tools&quot;</span>
-    <span class="p">]</span><span class="err">,</span>
-</code></pre></div>
-
-<p>A list of categories associated with the application. This is optional but sorting/filtering by category will eventually be a feature.</p>
-<h3 id="platform">platform</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;platform&quot;</span><span class="err">:</span> <span class="s2">&quot;linux&quot;</span><span class="err">,</span>
-</code></pre></div>
-
-<p>The platform the image will run on. Haven't tested anything but linux.</p>
-<h3 id="restart_policy">restart_policy</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;restart_policy&quot;</span><span class="err">:</span> <span class="s2">&quot;unless-stopped&quot;</span><span class="err">,</span>
-</code></pre></div>
-
-<p>Define your restart policy. Info <a href="https://docs.docker.com/engine/reference/run/#restart-policies---restart">here</a>.</p>
-<h3 id="ports">ports</h3>
-<div class="highlight"><pre><span></span><code>  <span class="s2">&quot;ports&quot;</span><span class="err">:</span> <span class="p">[</span>
-      <span class="s2">&quot;9091:9091/tcp&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;9090:9090/tcp&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;9092/tcp&quot;</span>
-    <span class="p">]</span><span class="err">,</span>
-</code></pre></div>
-
-<p>Ports to be passed through. The host port is on the left of the <code>:</code> and the container port is on the right. Protocol is after the <code>/</code>. If no host port is specified a random one is used. I frequently leave out the host port on applications that use common ports.</p>
-<h4 id="port-labels">Port Labels</h4>
-<p><div class="highlight"><pre><span></span><code>    <span class="s2">&quot;ports&quot;</span><span class="err">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;WebUI&quot;</span><span class="p">:</span> <span class="s2">&quot;8096:8096/tcp&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;HTTPS WebUI&quot;</span><span class="p">:</span> <span class="s2">&quot;8920:8920/tcp&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;DNLA&quot;</span><span class="p">:</span> <span class="s2">&quot;1900:1900/udp&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;Discovery&quot;</span><span class="p">:</span> <span class="s2">&quot;7359:7359/udp&quot;</span>
-      <span class="p">}</span>
-    <span class="p">]</span><span class="err">,</span>
-</code></pre></div>
-You can label ports for the services that are on them if you would like. This will auto-fill the label field in the deploy form and give users a better understanding of the applications they're running.</p>
-<h3 id="volumes">volumes</h3>
-<p><div class="highlight"><pre><span></span><code>    <span class="s2">&quot;volumes&quot;</span><span class="err">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/data&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span>
-      <span class="p">}</span>
-    <span class="p">]</span><span class="err">,</span>
-</code></pre></div>
-List of bind mounts. Container will mount inside of the container and bind will mount on the host. The bind section can utilize Template Variables in the users settings so if they're set they'll be replaced by what's there.</p>
-<h3 id="sysctls">sysctls</h3>
-<p><div class="highlight"><pre><span></span><code>    <span class="s2">&quot;sysctls&quot;</span><span class="err">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-      <span class="nt">&quot;net.ipv6.conf.all.disable_ipv6&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
-      <span class="p">}</span>
-    <span class="p">]</span><span class="err">,</span>
-</code></pre></div>
-Key value pair for sysctl options. More info available <a href="https://docs.docker.com/engine/reference/commandline/run/#configure-namespaced-kernel-parameters-sysctls-at-runtime">here</a></p>
-<h3 id="cap_add">cap_add</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;cap_add&quot;</span><span class="err">:</span> <span class="p">[</span>
-      <span class="s2">&quot;NET_ADMIN&quot;</span>
-    <span class="p">]</span><span class="err">,</span>
-</code></pre></div>
-
-<p>Value of capabilities you want to add to a container. More info available <a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities">here</a>.</p>
-<h3 id="env">env</h3>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;env&quot;</span><span class="err">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
-      <span class="p">},</span>
-    <span class="p">]</span>
-</code></pre></div>
-
-<p>Env is used to set environment variables within the docker container. The description and default are both optional. Label currently isn't used but will be what is shown as the name of the field in the deploy form.</p>
-<h3 id="labels">labels</h3>
-<p><div class="highlight"><pre><span></span><code><span class="s2">&quot;labels&quot;</span><span class="err">:</span> <span class="p">[</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.yacht.label&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is a label&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.yacht.otherlabel&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is another label&quot;</span>
-  <span class="p">}</span>
-<span class="p">]</span>
-</code></pre></div>
-Labels can be used for automating services like traefik automatically as well as store information about containers (this is where port descriptions are stored on containers). These will show up in the advanced section like sysctls and capabilities. </p>
-<h3 id="devices">devices</h3>
-<p><div class="highlight"><pre><span></span><code><span class="s2">&quot;devices&quot;</span><span class="err">:</span> <span class="p">[</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span>
-  <span class="p">}</span>
-<span class="p">]</span>
-</code></pre></div>
-Devices allow devices to be passed through containers for things like transcoding.</p>
-<h2 id="yaml">YAML</h2>
-<p>Yaml templates are also supported and support all of the same options. Here is the example but converted to yaml:</p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">App Title</span>
@@ -1071,6 +913,437 @@ Devices allow devices to be passed through containers for things like transcodin
   <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a description</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
+
+</div>
+</div>
+<h2 id="this-is-what-each-section-does">This is what each section does:</h2>
+<p><em>* = required</em></p>
+<h3 id="type">type*</h3>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>This currently isn't in use. It's just here to keep compatibility with portainer but is ignored.</p>
+<h3 id="title">title*</h3>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;App Title&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">App Title</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>This is what is displayed when in the apps list page. Punctuation is nice here and adds to the polish</p>
+<h3 id="name">name</h3>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;app_name&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">app_name</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>This is what the actual container is named. Information on this is <a href="https://docs.docker.com/engine/reference/run/#name---name">here</a>.</p>
+<h3 id="description">description</h3>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description.&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a description.</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>This is the description that is shown in the app list. <code>\n</code> is interpreted as a newline character</p>
+<h3 id="logo">logo</h3>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>This is the logo that is show in the app list.</p>
+<h3 id="image">image*</h3>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;haugene/transmission-openvpn:latest&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">haugene/transmission-openvpn:latest</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>This is the image that's pulled from dockerhub. The tag (<code>:latest</code>) is optional.</p>
+<h3 id="note">note</h3>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;List of supported providers available &lt;a href=&#39;https://haugene.github.io/docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">List of supported providers available &lt;a href=&#39;https://haugene.github.io/docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.,</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>This is shown when someone clicks on "VIEW" in the app list. It will render HTML appropriately.</p>
+<h3 id="categories">categories</h3>
+<div class="tabbed-set" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;VPN&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Tools&quot;</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">categories</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Other</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">VPN</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Tools</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><label for="__tabbed_9_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Other&quot;</span><span class="p">,</span> <span class="s2">&quot;VPN&quot;</span><span class="p">,</span> <span class="s2">&quot;Tools&quot;</span><span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>A list of categories associated with the application. This is optional but sorting/filtering by category will eventually be a feature.</p>
+<h3 id="platform">platform*</h3>
+<div class="tabbed-set" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="s2">&quot;linux&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">linux,</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>The platform the image will run on. Haven't tested anything but linux.</p>
+<h3 id="restart_policy">restart_policy</h3>
+<div class="tabbed-set" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;restart_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;unless-stopped&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><label for="__tabbed_11_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">restart_policy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>Define your restart policy. Info <a href="https://docs.docker.com/engine/reference/run/#restart-policies---restart">here</a>.</p>
+<h3 id="ports">ports</h3>
+<div class="tabbed-set" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;9091:9091/tcp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;9090:9090/tcp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;9092/tcp&quot;</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><label for="__tabbed_12_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">ports</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">9091:9091/tcp</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">9090:9090/tcp</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">9092/tcp</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><label for="__tabbed_12_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;9091:9091/tcp&quot;</span><span class="p">,</span> <span class="s2">&quot;9090:9090/tcp&quot;</span><span class="p">,</span> <span class="s2">&quot;9092/tcp&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>Ports to be passed through. The host port is on the left of the <code>:</code> and the container port is on the right. Protocol is after the <code>/</code>. If no host port is specified a random one is used. I frequently leave out the host port on applications that use common ports.</p>
+<h4 id="port-labels">Port Labels</h4>
+<div class="tabbed-set" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><label for="__tabbed_13_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;WebUI&quot;</span><span class="p">:</span> <span class="s2">&quot;8096:8096/tcp&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;HTTPS WebUI&quot;</span><span class="p">:</span> <span class="s2">&quot;8920:8920/tcp&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;DNLA&quot;</span><span class="p">:</span> <span class="s2">&quot;1900:1900/udp&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;Discovery&quot;</span><span class="p">:</span> <span class="s2">&quot;7359:7359/udp&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><label for="__tabbed_13_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">ports</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">WebUI</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8096:8096/tcp</span>
+<span class="p p-Indicator">-</span> <span class="nt">HTTPS WebUI</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8920:8920/tcp</span>
+<span class="p p-Indicator">-</span> <span class="nt">DNLA</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1900:1900/udp</span>
+<span class="p p-Indicator">-</span> <span class="nt">Discovery</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7359:7359/udp</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><label for="__tabbed_13_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;WebUI&quot;</span><span class="p">:</span> <span class="s2">&quot;8096:8096/tcp&quot;</span><span class="p">,</span> <span class="nt">&quot;HTTPS WebUI&quot;</span><span class="p">:</span> <span class="s2">&quot;8920:8920/tcp&quot;</span><span class="p">,</span>  <span class="nt">&quot;DNLA&quot;</span><span class="p">:</span> <span class="s2">&quot;1900:1900/udp&quot;</span><span class="p">,</span> <span class="nt">&quot;Discovery&quot;</span><span class="p">:</span> <span class="s2">&quot;7359:7359/udp&quot;</span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>You can label ports for the services that are on them if you would like. This will auto-fill the label field in the deploy form and give users a better understanding of the applications they're running.</p>
+<h3 id="volumes">volumes</h3>
+<div class="tabbed-set" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/data&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">container</span><span class="p">:</span> <span class="s">&quot;/data&quot;</span>
+  <span class="nt">bind</span><span class="p">:</span> <span class="s">&quot;!downloads&quot;</span>
+<span class="p p-Indicator">-</span> <span class="nt">container</span><span class="p">:</span> <span class="s">&quot;/etc/localtime&quot;</span>
+  <span class="nt">bind</span><span class="p">:</span> <span class="s">&quot;/etc/localtime&quot;</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><label for="__tabbed_14_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="err">/data</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span> <span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>List of bind mounts. Container will mount inside of the container and bind will mount on the host. The bind section can utilize Template Variables in the users settings so if they're set they'll be replaced by what's there.</p>
+<h3 id="sysctls">sysctls</h3>
+<div class="tabbed-set" data-tabs="15:3"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;sysctls&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="nt">&quot;net.ipv6.conf.all.disable_ipv6&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">sysctls</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">net.ipv6.conf.all.disable_ipv6</span><span class="p">:</span> <span class="s">&#39;0&#39;</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><label for="__tabbed_15_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;sysctls&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;net.ipv6.conf.all.disable_ipv6&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>Key value pair for sysctl options. More info available <a href="https://docs.docker.com/engine/reference/commandline/run/#configure-namespaced-kernel-parameters-sysctls-at-runtime">here</a></p>
+<h3 id="cap_add">cap_add</h3>
+<div class="tabbed-set" data-tabs="16:3"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;cap_add&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;NET_ADMIN&quot;</span>
+  <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">cap_add</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NET_ADMIN</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><label for="__tabbed_16_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;cap_add&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;NET_ADMIN&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>Value of capabilities you want to add to a container. More info available <a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities">here</a>.</p>
+<h3 id="env">env</h3>
+<div class="tabbed-set" data-tabs="17:3"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><label for="__tabbed_17_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span>
+    <span class="p">},</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><label for="__tabbed_17_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PUID</span>
+  <span class="nt">label</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PUID</span>
+  <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PGID</span>
+  <span class="nt">label</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PGID</span>
+  <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EnvWithDescription</span>
+  <span class="nt">label</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">EnvWithDescription</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a description</span>
+  <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">defaullt</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_17_3" name="__tabbed_17" type="radio" /><label for="__tabbed_17_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">},{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">},{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>Env is used to set environment variables within the docker container. The description and default are both optional. Label currently isn't used but will be what is shown as the name of the field in the deploy form.</p>
+<h3 id="labels">labels</h3>
+<div class="tabbed-set" data-tabs="18:3"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><label for="__tabbed_18_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.yacht.label&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is a label&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.yacht.otherlabel&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is another label&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><label for="__tabbed_18_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">labels</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">label</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local.yacht.label</span>
+  <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">this is a label</span>
+<span class="p p-Indicator">-</span> <span class="nt">label</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local.yacht.otherlabel</span>
+  <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">this is another label</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><label for="__tabbed_18_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.yacht.label&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is a label&quot;</span><span class="p">},{</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.ycht.otherlabel&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is another label&quot;</span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>Labels can be used for automating services like traefik automatically as well as store information about containers (this is where port descriptions are stored on containers). These will show up in the advanced section like sysctls and capabilities. </p>
+<h3 id="devices">devices</h3>
+<div class="tabbed-set" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><label for="__tabbed_19_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><label for="__tabbed_19_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">devices</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/dev/null</span>
+  <span class="nt">container</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/dev/null</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><label for="__tabbed_19_3">Single Line JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span><span class="p">,</span><span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<p>Devices allow devices to be passed through containers for things like transcoding.</p>
                 
                   
                     
@@ -1079,7 +1352,7 @@ Devices allow devices to be passed through containers for things like transcodin
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-10-06T15:26:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-10-06</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-10-06T17:27:19+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-10-06</span>
     
   </small>
 </div>

@@ -3,10 +3,14 @@
 ## via Docker
 Installing Yacht via docker is as simple as running two commands:
 
-```
-docker volume create yacht
-docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config selfhostedpro/yacht
-```
+!!! code "Installation"
+
+    === "Linux"
+        ```
+        docker volume create yacht
+        docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config selfhostedpro/yacht
+        ```
+
 This will start Yacht on port 8000 (change this to 8001 if you're also using portainer).
 
 The default login is `admin@yacht.local` and `pass` you should change this immediately by clicking on admin in the top right and then "User" then select "Change Password" in the top menu. You can also change your username using this field.
@@ -14,7 +18,7 @@ The default login is `admin@yacht.local` and `pass` you should change this immed
 If you need to reset your password/username to the included defaults, please delete your yacht volume and create a new one (you will lose all of your configurations so be sure to backup when you make changes).
 
 ## via OpenMediaVault
-Installing Yacht via OpenMediaVault can be done through [OMV-Extras](https://omv-extras.org/). Installation instructions for OpenMediaVault can be found [here](https://forum.openmediavault.org/index.php?thread/5549-omv-extras-org-plugin/)
+Installing Yacht via OpenMediaVault can be done through [OMV-Extras](https://omv-extras.org/). Installation instructions for OMV-Extras can be found [here](https://forum.openmediavault.org/index.php?thread/5549-omv-extras-org-plugin/)
 
 Once OMV-Extras is installed you'll need to do the following steps:
 
@@ -27,7 +31,7 @@ Once it's installed you can use the button to open Yacht.
 
 ## via Docker Compose
 The following is an example docker-compose.yml file to deploy Yacht:
-```yaml
+```yaml linenums="1"
 ---
 version: '3'
 services:

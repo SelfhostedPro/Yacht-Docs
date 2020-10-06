@@ -30,6 +30,8 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tabbed
+  - admonition
+  - pymdownx.details
 
 plugins:
   - search

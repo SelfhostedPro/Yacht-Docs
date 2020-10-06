@@ -3,10 +3,13 @@ This guide will take you through setting up Yacht, adding your first template, a
 
 ## Setting Up Yacht
 Running Yacht is as simple as running the following two commands:
-```
-docker volume create yacht
-docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config selfhostedpro/yacht
-```
+
+!!! code "Installation Script"
+    ```
+    docker volume create yacht
+    docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config selfhostedpro/yacht
+    ```
+
 After that you can access Yacht on port 8000 on your server in a web browser.
 
 _If you're using Yacht alongside portainer you'll want to change the 8000 on the left of the `:` to 8001, then it will be available on that port on your host._
