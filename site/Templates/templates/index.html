@@ -816,8 +816,64 @@
 <p>Single app templates will be surrounded by <code>{}</code> as is standard for .json files. Multi app templates with consist of multiple <code>{}</code> sections (separated with a <code>,</code> after the <code>}</code> (ie. <code>},</code>) surrounded in <code>[]</code>.</p>
 <p>More info on writing JSON is available <a href="https://www.tutorialspoint.com/json/json_quick_guide.htm">here</a></p>
 <p>If you don't like writing in JSON another option is to use YAML. It's automatically converted into JSON in the backend so all of the options are the same.</p>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">JSON</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
   <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;App Title&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;container-name&quot;</span><span class="p">,</span>
@@ -873,10 +929,46 @@
   <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
+</td></tr></table>
 
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">YAML</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">App Title</span>
 <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">container-name</span>
@@ -913,12 +1005,16 @@
   <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a description</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
+</td></tr></table>
 
+</div>
 </div>
 </div>
 <h2 id="this-is-what-each-section-does">This is what each section does:</h2>
 <p><em>* = required</em></p>
 <h3 id="type">type*</h3>
+<div class="admonition code">
+<p class="admonition-title">Code Example</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -932,8 +1028,11 @@
 
 </div>
 </div>
+</div>
 <p>This currently isn't in use. It's just here to keep compatibility with portainer but is ignored.</p>
 <h3 id="title">title*</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;App Title&quot;</span><span class="p">,</span>
@@ -947,8 +1046,11 @@
 
 </div>
 </div>
+</div>
 <p>This is what is displayed when in the apps list page. Punctuation is nice here and adds to the polish</p>
 <h3 id="name">name</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;app_name&quot;</span><span class="p">,</span>
@@ -962,8 +1064,11 @@
 
 </div>
 </div>
+</div>
 <p>This is what the actual container is named. Information on this is <a href="https://docs.docker.com/engine/reference/run/#name---name">here</a>.</p>
 <h3 id="description">description</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description.&quot;</span><span class="p">,</span>
@@ -977,23 +1082,29 @@
 
 </div>
 </div>
+</div>
 <p>This is the description that is shown in the app list. <code>\n</code> is interpreted as a newline character</p>
 <h3 id="logo">logo</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/   Images/transmission-icon.png&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
 
 </div>
 <input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">YAML</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png</span>
+<div class="highlight"><pre><span></span><code><span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/   transmission-icon.png</span>
 </code></pre></div>
 
 </div>
 </div>
+</div>
 <p>This is the logo that is show in the app list.</p>
 <h3 id="image">image*</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;haugene/transmission-openvpn:latest&quot;</span><span class="p">,</span>
@@ -1007,23 +1118,29 @@
 
 </div>
 </div>
+</div>
 <p>This is the image that's pulled from dockerhub. The tag (<code>:latest</code>) is optional.</p>
 <h3 id="note">note</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;List of supported providers available &lt;a href=&#39;https://haugene.github.io/docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;List of supported providers available &lt;a href=&#39;https://haugene.github.io/    docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
 
 </div>
 <input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">YAML</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">List of supported providers available &lt;a href=&#39;https://haugene.github.io/docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.,</span>
+<div class="highlight"><pre><span></span><code><span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">List of supported providers available &lt;a href=&#39;https://haugene.github.io/   docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.,</span>
 </code></pre></div>
 
 </div>
 </div>
+</div>
 <p>This is shown when someone clicks on "VIEW" in the app list. It will render HTML appropriately.</p>
 <h3 id="categories">categories</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1051,8 +1168,11 @@
 
 </div>
 </div>
+</div>
 <p>A list of categories associated with the application. This is optional but sorting/filtering by category will eventually be a feature.</p>
 <h3 id="platform">platform*</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><label for="__tabbed_10_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="s2">&quot;linux&quot;</span><span class="p">,</span>
@@ -1066,8 +1186,11 @@
 
 </div>
 </div>
+</div>
 <p>The platform the image will run on. Haven't tested anything but linux.</p>
 <h3 id="restart_policy">restart_policy</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><label for="__tabbed_11_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;restart_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;unless-stopped&quot;</span><span class="p">,</span>
@@ -1081,8 +1204,11 @@
 
 </div>
 </div>
+</div>
 <p>Define your restart policy. Info <a href="https://docs.docker.com/engine/reference/run/#restart-policies---restart">here</a>.</p>
 <h3 id="ports">ports</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><label for="__tabbed_12_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1110,8 +1236,11 @@
 
 </div>
 </div>
+</div>
 <p>Ports to be passed through. The host port is on the left of the <code>:</code> and the container port is on the right. Protocol is after the <code>/</code>. If no host port is specified a random one is used. I frequently leave out the host port on applications that use common ports.</p>
 <h4 id="port-labels">Port Labels</h4>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><label for="__tabbed_13_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1143,8 +1272,11 @@
 
 </div>
 </div>
+</div>
 <p>You can label ports for the services that are on them if you would like. This will auto-fill the label field in the deploy form and give users a better understanding of the applications they're running.</p>
 <h3 id="volumes">volumes</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1178,8 +1310,11 @@
 
 </div>
 </div>
+</div>
 <p>List of bind mounts. Container will mount inside of the container and bind will mount on the host. The bind section can utilize Template Variables in the users settings so if they're set they'll be replaced by what's there.</p>
 <h3 id="sysctls">sysctls</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="15:3"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;sysctls&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1205,8 +1340,11 @@
 
 </div>
 </div>
+</div>
 <p>Key value pair for sysctl options. More info available <a href="https://docs.docker.com/engine/reference/commandline/run/#configure-namespaced-kernel-parameters-sysctls-at-runtime">here</a></p>
 <h3 id="cap_add">cap_add</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="16:3"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;cap_add&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1230,8 +1368,11 @@
 
 </div>
 </div>
+</div>
 <p>Value of capabilities you want to add to a container. More info available <a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities">here</a>.</p>
 <h3 id="env">env</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="17:3"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><label for="__tabbed_17_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1279,8 +1420,11 @@
 
 </div>
 </div>
+</div>
 <p>Env is used to set environment variables within the docker container. The description and default are both optional. Label currently isn't used but will be what is shown as the name of the field in the deploy form.</p>
 <h3 id="labels">labels</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="18:3"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><label for="__tabbed_18_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1314,8 +1458,11 @@
 
 </div>
 </div>
+</div>
 <p>Labels can be used for automating services like traefik automatically as well as store information about containers (this is where port descriptions are stored on containers). These will show up in the advanced section like sysctls and capabilities. </p>
 <h3 id="devices">devices</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
 <div class="tabbed-set" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><label for="__tabbed_19_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1343,6 +1490,7 @@
 
 </div>
 </div>
+</div>
 <p>Devices allow devices to be passed through containers for things like transcoding.</p>
                 
                   
@@ -1352,7 +1500,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-10-06T17:27:19+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-10-06</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-10-06T18:25:05+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-10-06</span>
     
   </small>
 </div>
