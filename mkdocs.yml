@@ -20,6 +20,10 @@ nav:
     - 'Dashboard' : 'Pages/dashboard.md'
     - 'Applications' : 'Pages/applications.md'
     - 'Templates' : 'Pages/templates.md'
+    - Resources:
+      - 'Networks' : 'Pages/networks.md'
+      - 'Volumes' : 'Pages/volumes.md'
+      - 'Images' : 'Pages/images.md'
     - 'Server Settings' : 'Pages/serverSettings.md'
     - 'User Settings' : 'Pages/userSettings.md'
   - Advanced:

@@ -420,6 +420,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#network_mode" class="md-nav__link">
+    network_mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#volumes" class="md-nav__link">
     volumes
   </a>
@@ -544,6 +551,68 @@
     <a href="../../Pages/templates/" class="md-nav__link">
       Templates
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Resources
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Resources" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Resources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Pages/networks/" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Pages/volumes/" class="md-nav__link">
+      Volumes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Pages/images/" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -748,6 +817,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#network_mode" class="md-nav__link">
+    network_mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#volumes" class="md-nav__link">
     volumes
   </a>
@@ -873,7 +949,8 @@
 52
 53
 54
-55</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+55
+56</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
   <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;App Title&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;container-name&quot;</span><span class="p">,</span>
@@ -891,6 +968,7 @@
     <span class="s2">&quot;9091:9091/tcp&quot;</span><span class="p">,</span>
     <span class="s2">&quot;9090:9090/tcp&quot;</span>
   <span class="p">],</span>
+  <span class="nt">&quot;network_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;bridge&quot;</span><span class="p">,</span>
   <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/data&quot;</span><span class="p">,</span>
@@ -968,7 +1046,8 @@
 33
 34
 35
-36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nn">---</span>
+36
+37</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
 <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">App Title</span>
 <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">container-name</span>
@@ -984,6 +1063,7 @@
 <span class="nt">ports</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">9091:9091/tcp</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">9090:9090/tcp</span>
+<span class="nt">network_mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bridge</span>
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">container</span><span class="p">:</span> <span class="s">&quot;/data&quot;</span>
   <span class="nt">bind</span><span class="p">:</span> <span class="s">&quot;!downloads&quot;</span>
@@ -1274,10 +1354,29 @@
 </div>
 </div>
 <p>You can label ports for the services that are on them if you would like. This will auto-fill the label field in the deploy form and give users a better understanding of the applications they're running.</p>
+<h3 id="network_mode">network_mode</h3>
+<div class="admonition code">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">JSON</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;network_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;host&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">network_mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+<p>You can set a certain network mode if you're using a legacy application that requires it. </p>
+<p><em>any ports mapped will not be passed through if you choose host as your networking mode and you cannot change the ports</em></p>
 <h3 id="volumes">volumes</h3>
 <div class="admonition code">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="14:3"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><label for="__tabbed_14_1">JSON</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="15:3"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -1293,7 +1392,7 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">YAML</label><div class="tabbed-content">
+<input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">container</span><span class="p">:</span> <span class="s">&quot;/data&quot;</span>
   <span class="nt">bind</span><span class="p">:</span> <span class="s">&quot;!downloads&quot;</span>
@@ -1302,7 +1401,7 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><label for="__tabbed_14_3">Single Line JSON</label><div class="tabbed-content">
+<input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><label for="__tabbed_15_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="err">/data</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span> <span class="p">}]</span>
 <span class="p">}</span>
@@ -1315,7 +1414,7 @@
 <h3 id="sysctls">sysctls</h3>
 <div class="admonition code">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="15:3"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><label for="__tabbed_15_1">JSON</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="16:3"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;sysctls&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -1326,13 +1425,13 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">YAML</label><div class="tabbed-content">
+<input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">sysctls</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">net.ipv6.conf.all.disable_ipv6</span><span class="p">:</span> <span class="s">&#39;0&#39;</span>
 </code></pre></div>
 
 </div>
-<input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><label for="__tabbed_15_3">Single Line JSON</label><div class="tabbed-content">
+<input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><label for="__tabbed_16_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;sysctls&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;net.ipv6.conf.all.disable_ipv6&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span> <span class="p">}</span> <span class="p">]</span>
 <span class="p">}</span>
@@ -1345,7 +1444,7 @@
 <h3 id="cap_add">cap_add</h3>
 <div class="admonition code">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="16:3"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><label for="__tabbed_16_1">JSON</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="17:3"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><label for="__tabbed_17_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;cap_add&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">&quot;NET_ADMIN&quot;</span>
@@ -1354,13 +1453,13 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">YAML</label><div class="tabbed-content">
+<input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><label for="__tabbed_17_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">cap_add</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NET_ADMIN</span>
 </code></pre></div>
 
 </div>
-<input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><label for="__tabbed_16_3">Single Line JSON</label><div class="tabbed-content">
+<input id="__tabbed_17_3" name="__tabbed_17" type="radio" /><label for="__tabbed_17_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;cap_add&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;NET_ADMIN&quot;</span><span class="p">]</span>
 <span class="p">}</span>
@@ -1373,7 +1472,7 @@
 <h3 id="env">env</h3>
 <div class="admonition code">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="17:3"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><label for="__tabbed_17_1">JSON</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="18:3"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><label for="__tabbed_18_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -1397,7 +1496,7 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><label for="__tabbed_17_2">YAML</label><div class="tabbed-content">
+<input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><label for="__tabbed_18_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PUID</span>
   <span class="nt">label</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PUID</span>
@@ -1412,7 +1511,7 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_17_3" name="__tabbed_17" type="radio" /><label for="__tabbed_17_3">Single Line JSON</label><div class="tabbed-content">
+<input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><label for="__tabbed_18_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">},{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">},{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">}]</span>
 <span class="p">}</span>
@@ -1425,7 +1524,7 @@
 <h3 id="labels">labels</h3>
 <div class="admonition code">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="18:3"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><label for="__tabbed_18_1">JSON</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><label for="__tabbed_19_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[</span>
   <span class="p">{</span>
@@ -1441,7 +1540,7 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><label for="__tabbed_18_2">YAML</label><div class="tabbed-content">
+<input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><label for="__tabbed_19_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">labels</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">label</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local.yacht.label</span>
   <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">this is a label</span>
@@ -1450,7 +1549,7 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><label for="__tabbed_18_3">Single Line JSON</label><div class="tabbed-content">
+<input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><label for="__tabbed_19_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.yacht.label&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is a label&quot;</span><span class="p">},{</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.ycht.otherlabel&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is another label&quot;</span><span class="p">}]</span>
 <span class="p">}</span>
@@ -1463,7 +1562,7 @@
 <h3 id="devices">devices</h3>
 <div class="admonition code">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set" data-tabs="19:3"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><label for="__tabbed_19_1">JSON</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="20:3"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><label for="__tabbed_20_1">JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -1475,14 +1574,14 @@
 </code></pre></div>
 
 </div>
-<input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><label for="__tabbed_19_2">YAML</label><div class="tabbed-content">
+<input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><label for="__tabbed_20_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">devices</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/dev/null</span>
   <span class="nt">container</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/dev/null</span>
 </code></pre></div>
 
 </div>
-<input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><label for="__tabbed_19_3">Single Line JSON</label><div class="tabbed-content">
+<input id="__tabbed_20_3" name="__tabbed_20" type="radio" /><label for="__tabbed_20_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span><span class="p">,</span><span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span><span class="p">}]</span>
 <span class="p">}</span>

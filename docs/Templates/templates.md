@@ -30,6 +30,7 @@ If you don't like writing in JSON another option is to use YAML. It's automatica
             "9091:9091/tcp",
             "9090:9090/tcp"
           ],
+          "network_mode": "bridge",
           "volumes": [
             {
               "container": "/data",
@@ -88,6 +89,7 @@ If you don't like writing in JSON another option is to use YAML. It's automatica
         ports:
         - 9091:9091/tcp
         - 9090:9090/tcp
+        network_mode: bridge
         volumes:
         - container: "/data"
           bind: "!downloads"
@@ -357,6 +359,25 @@ Ports to be passed through. The host port is on the left of the `:` and the cont
         ```
 
 You can label ports for the services that are on them if you would like. This will auto-fill the label field in the deploy form and give users a better understanding of the applications they're running.
+
+### network_mode
+
+!!! code "Example"
+
+    === "JSON"
+        ```json 
+        {
+          "network_mode": "host"
+        }
+        ```
+    === "YAML"
+        ```yaml 
+        network_mode: host
+        ```
+
+You can set a certain network mode if you're using a legacy application that requires it. 
+
+*any ports mapped will not be passed through if you choose host as your networking mode and you cannot change the ports*
 
 ### volumes
 
