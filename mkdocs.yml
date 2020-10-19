@@ -29,6 +29,8 @@ nav:
   - Advanced:
     - 'Reverse Proxy' : 'Advanced/proxy.md'
     - 'ARM (RPI)' : 'Advanced/arm.md'
+  - Developer Info:
+    - 'Developer Setup' : 'Developer_Information/DeveloperSetup.md'
 
 markdown_extensions:
   - pymdownx.highlight
