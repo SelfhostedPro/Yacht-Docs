@@ -394,7 +394,9 @@ You can set a certain network mode if you're using a legacy application that req
             {
               "container": "/etc/localtime",
               "bind": "/etc/localtime"
-            }
+            },
+              "container": "/config",
+              "bind": "app_config"
           ],
         }
         ```
@@ -405,15 +407,17 @@ You can set a certain network mode if you're using a legacy application that req
           bind: "!downloads"
         - container: "/etc/localtime"
           bind: "/etc/localtime"
+        - container: "/config"
+          bind: "app_config"
         ```
     === "Single Line JSON"
         ```json 
         {
-          "volumes": [{ "container": /data, "bind": "!downloads" }, { "container": "/etc/localtime", "bind": "/etc/localtime" }]
+          "volumes": [{ "container": /data, "bind": "!downloads" }, { "container": "/etc/localtime", "bind": "/etc/localtime" }, { "container": "/config", "bind": "app_config"}]
         }
         ```
 
-List of bind mounts. Container will mount inside of the container and bind will mount on the host. The bind section can utilize Template Variables in the users settings so if they're set they'll be replaced by what's there.
+List of bind mounts. Container will mount inside of the container and bind will mount on the host. The bind section can utilize Template Variables in the users settings so if they're set they'll be replaced by what's there. You can use a named volume by using the name of the volume instead of a path (no `/` at the beginning).
 
 ### sysctls
 

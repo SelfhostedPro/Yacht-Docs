@@ -1424,7 +1424,9 @@
     <span class="p">{</span>
       <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span>
       <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span>
-    <span class="p">}</span>
+    <span class="p">},</span>
+      <span class="s2">&quot;container&quot;</span><span class="err">:</span> <span class="s2">&quot;/config&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;bind&quot;</span><span class="err">:</span> <span class="s2">&quot;app_config&quot;</span>
   <span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1436,19 +1438,21 @@
   <span class="nt">bind</span><span class="p">:</span> <span class="s">&quot;!downloads&quot;</span>
 <span class="p p-Indicator">-</span> <span class="nt">container</span><span class="p">:</span> <span class="s">&quot;/etc/localtime&quot;</span>
   <span class="nt">bind</span><span class="p">:</span> <span class="s">&quot;/etc/localtime&quot;</span>
+<span class="p p-Indicator">-</span> <span class="nt">container</span><span class="p">:</span> <span class="s">&quot;/config&quot;</span>
+  <span class="nt">bind</span><span class="p">:</span> <span class="s">&quot;app_config&quot;</span>
 </code></pre></div>
 
 </div>
 <input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><label for="__tabbed_15_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="err">/data</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span> <span class="p">}]</span>
+  <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="err">/data</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/config&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;app_config&quot;</span><span class="p">}]</span>
 <span class="p">}</span>
 </code></pre></div>
 
 </div>
 </div>
 </div>
-<p>List of bind mounts. Container will mount inside of the container and bind will mount on the host. The bind section can utilize Template Variables in the users settings so if they're set they'll be replaced by what's there.</p>
+<p>List of bind mounts. Container will mount inside of the container and bind will mount on the host. The bind section can utilize Template Variables in the users settings so if they're set they'll be replaced by what's there. You can use a named volume by using the name of the volume instead of a path (no <code>/</code> at the beginning).</p>
 <h3 id="sysctls">sysctls</h3>
 <div class="admonition code">
 <p class="admonition-title">Example</p>
