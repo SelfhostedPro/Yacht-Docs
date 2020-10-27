@@ -5,6 +5,7 @@ theme:
     repo: fontawesome/brands/git-alt
   favicon: assets/images/favicon.ico
   logo: assets/images/logo.svg
+  custom_dir: overrides
 extra_css:
   - stylesheets/extra.css
 nav:
