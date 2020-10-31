@@ -30,6 +30,7 @@ nav:
   - Advanced:
     - 'Reverse Proxy' : 'Advanced/proxy.md'
     - 'ARM (RPI)' : 'Advanced/arm.md'
+    - 'Docker-Compose' : 'Advanced/docker-compose.md'
   - Developer Info:
     - 'Developer Setup' : 'Developer_Information/DeveloperSetup.md'
 
