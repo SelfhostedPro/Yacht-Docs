@@ -66,8 +66,8 @@ Here is an example docker run command to use this setup:
             environment:
               - COMPOSE_DIR=/compose/
             volumes:
-              - yacht_data
-              - /path/to/data:/config
+              - yacht_data:/config
+              - <path-to-compose-dir>:/compose
             ports:
               - 8000:8000
             restart: always
