@@ -683,6 +683,27 @@ docker run -d \
 </div>
 </div>
 </div>
+<h1 id="docker-compose-folder-structure">Docker Compose Folder Structure:</h1>
+<p>The following is an example folder structure:</p>
+<div class="admonition code">
+<p class="admonition-title">Folder Structure</p>
+<div class="highlight"><pre><span></span><code>compose
+├── docker-pulls                <span class="c1">### Project Folder###</span>
+│   ├── Docker_Hub_Stats.json
+│   ├── README.md
+│   ├── config.monitoring
+│   ├── docker-compose.yml      <span class="c1">### docker-compose.yml ###</span>
+│   ├── prometheus
+│   │   ├── alert.rules
+│   │   └── prometheus.yml
+│   └── prometheus.yml
+├── opendistro                  <span class="c1">### Project Folder</span>
+    └── docker-compose.yml      <span class="c1">### docker-compose.yml ###</span>
+</code></pre></div>
+
+</div>
+<p>The way this works is the Project will be named the same as the project folder. Inside of the project folder you can put the docker-compose.yml file as well as any other files you need to pass through.</p>
+<p>These will be seen by Yacht and you'll be able to control the projects, as well as the services within them. When you view a project, the docker-compose file is parsed and you'll see all of the details of the project.</p>
                 
                   
                     
@@ -691,7 +712,7 @@ docker run -d \
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-10-31T20:29:59+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-10-31</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-10-31T21:09:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-10-31</span>
     
   </small>
 </div>
