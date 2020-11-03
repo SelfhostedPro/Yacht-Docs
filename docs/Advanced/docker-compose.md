@@ -11,11 +11,11 @@ The following is an example docker run command to use this setup:
     === "docker-cli"
         ``` 
         docker run -d \
-            --name=yacht
+            --name=yacht \
             -p 8000:8000 \
             -v /var/run/docker.sock:/var/run/docker.sock \
             -v /path/to/data:/config \
-            --restart always
+            --restart always \
             selfhostedpro/yacht
         ```
     === "docker-compose"
@@ -48,6 +48,7 @@ Here is an example docker run command to use this setup:
         ``` 
         docker volume create yacht
         docker run -d \
+            --name=yacht \
             -p 8000:8000 \
             -v /var/run/docker.sock:/var/run/docker.sock \
             -v yacht_data:/config \
