@@ -4,7 +4,7 @@
     --md-default-fg-color:               #FFFFFF;
     --md-default-fg-color--light:        #FFFFFF;
     --md-default-fg-color--lighter:      #FFFFFF;
-    --md-default-fg-color--lightest:     #2E2E2E2E;
+    --md-default-fg-color--lightest:     #2E2E2E;
     --md-default-bg-color:               #2E2E2E;
     --md-default-bg-color--light:        #2E2E2E;
     --md-default-bg-color--lighter:      #2E2E2E;
@@ -36,8 +36,9 @@
     --md-code-hl-string-color: #FFFFFF;
     --md-code-hl-number-color: #008a8a;
 
+
     /* Footer */
-    --md-footer-bg-color:  #41b883;
+    --md-footer-bg-color:  #2E2E2E;
     --md-footer-bg-color--dark: hsla(0, 0%, 0%, 0.32);
     --md-footer-fg-color: hsla(0, 0%, 100%, 1);
     --md-footer-fg-color--light: hsla(0, 0%, 100%, 0.7);
@@ -57,4 +58,7 @@
     background-color: #2E2E2E;
     -webkit-mask-image: var(--md-admonition-icon--code);
             mask-image: var(--md-admonition-icon--code);
+  }
+  .announce__inner {
+    text-align: center;
   }

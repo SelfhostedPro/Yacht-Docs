@@ -617,11 +617,11 @@
 <p class="admonition-title">Docker-Compose Example</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">docker-cli</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>docker run -d \
-    --name=yacht
+    --name=yacht \
     -p 8000:8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /path/to/data:/config \
-    --restart always
+    --restart always \
     selfhostedpro/yacht
 </code></pre></div>
 
@@ -652,6 +652,7 @@
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">docker-cli</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>docker volume create yacht
 docker run -d \
+    --name=yacht \
     -p 8000:8000 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v yacht_data:/config \
@@ -712,7 +713,7 @@ docker run -d \
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-10-31T21:09:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-10-31</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2020-11-03T17:29:11+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2020-11-03</span>
     
   </small>
 </div>
