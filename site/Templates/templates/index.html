@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
       
     
@@ -28,12 +29,14 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
@@ -48,15 +51,7 @@
 <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
 
 
-  
-        <style>
-        .git-revision-date-localized-plugin-iso_date { display: none }
-        @media print {
-           .git-revision-date-localized-plugin-iso_date { display: inline } 
-           .git-revision-date-localized-plugin-timeago { display: none } 
-        }
-        </style>
-        </head>
+  </head>
   
   
     
@@ -67,6 +62,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
       
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -82,7 +78,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="../.." title="Yacht Documentation" class="md-header-nav__button md-logo" aria-label="Yacht Documentation">
       
@@ -93,18 +91,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             Yacht Documentation
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Templates Explained
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -115,7 +115,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -163,10 +163,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Yacht Documentation" class="md-nav__button md-logo" aria-label="Yacht Documentation">
       
@@ -196,6 +202,7 @@
       
 
 
+
   <li class="md-nav__item">
     <a href="../.." class="md-nav__link">
       Home
@@ -208,9 +215,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     
     <label class="md-nav__link" for="nav-2">
       Installation
@@ -229,6 +239,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../../Installation/requirements/" class="md-nav__link">
       Requirements
@@ -239,6 +250,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -253,9 +265,36 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../../Installation/gettingstarted/" class="md-nav__link">
       Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../Installation/arm/" class="md-nav__link">
+      ARM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../Installation/macos/" class="md-nav__link">
+      MacOS
     </a>
   </li>
 
@@ -269,10 +308,13 @@
       
       
 
+
   
 
 
+  
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
@@ -291,6 +333,7 @@
           
           
           
+
 
   
 
@@ -488,6 +531,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../variables/" class="md-nav__link">
       Template Variables
@@ -505,9 +549,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     
     <label class="md-nav__link" for="nav-4">
       Pages
@@ -526,6 +573,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../../Pages/dashboard/" class="md-nav__link">
       Dashboard
@@ -536,6 +584,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -550,6 +599,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../../Pages/templates/" class="md-nav__link">
       Templates
@@ -562,9 +612,12 @@
           
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
     
     <label class="md-nav__link" for="nav-4-4">
       Resources
@@ -583,6 +636,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../../Pages/networks/" class="md-nav__link">
       Networks
@@ -595,6 +649,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../../Pages/volumes/" class="md-nav__link">
       Volumes
@@ -605,6 +660,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -624,6 +680,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../../Pages/serverSettings/" class="md-nav__link">
       Server Settings
@@ -634,6 +691,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -653,9 +711,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     
     <label class="md-nav__link" for="nav-5">
       Advanced
@@ -674,6 +735,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../../Advanced/proxy/" class="md-nav__link">
       Reverse Proxy
@@ -685,17 +747,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../../Advanced/arm/" class="md-nav__link">
-      ARM (RPI)
-    </a>
-  </li>
-
-        
-          
-          
-          
 
 
   <li class="md-nav__item">
@@ -715,9 +766,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
     
     <label class="md-nav__link" for="nav-6">
       Developer Info
@@ -734,6 +788,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -755,7 +810,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1064,7 +1120,6 @@
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">YAML</label><div class="tabbed-content">
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -1142,7 +1197,6 @@
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
 </td></tr></table>
-
 </div>
 </div>
 </div>
@@ -1156,12 +1210,10 @@
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1174,12 +1226,10 @@
   <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;App Title&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">App Title</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1192,12 +1242,10 @@
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;app_name&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">app_name</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1210,12 +1258,10 @@
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description.&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a description.</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1228,12 +1274,10 @@
   <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/   Images/transmission-icon.png&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/   transmission-icon.png</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1246,12 +1290,10 @@
   <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;haugene/transmission-openvpn:latest&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">haugene/transmission-openvpn:latest</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1264,12 +1306,10 @@
   <span class="nt">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;List of supported providers available &lt;a href=&#39;https://haugene.github.io/    docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">note</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">List of supported providers available &lt;a href=&#39;https://haugene.github.io/   docker-transmission-openvpn/supported-providers&#39;/&gt;here&lt;/a&gt;.,</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1286,7 +1326,6 @@
   <span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">categories</span><span class="p">:</span>
@@ -1294,14 +1333,12 @@
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">VPN</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Tools</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><label for="__tabbed_9_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;categories&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Other&quot;</span><span class="p">,</span> <span class="s2">&quot;VPN&quot;</span><span class="p">,</span> <span class="s2">&quot;Tools&quot;</span><span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1314,12 +1351,10 @@
   <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="s2">&quot;linux&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><label for="__tabbed_10_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">platform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">linux,</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1332,12 +1367,10 @@
   <span class="nt">&quot;restart_policy&quot;</span><span class="p">:</span> <span class="s2">&quot;unless-stopped&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><label for="__tabbed_11_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">restart_policy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1354,7 +1387,6 @@
     <span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><label for="__tabbed_12_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">ports</span><span class="p">:</span>
@@ -1362,14 +1394,12 @@
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">9090:9090/tcp</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">9092/tcp</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><label for="__tabbed_12_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;9091:9091/tcp&quot;</span><span class="p">,</span> <span class="s2">&quot;9090:9090/tcp&quot;</span><span class="p">,</span> <span class="s2">&quot;9092/tcp&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1389,7 +1419,6 @@
   <span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><label for="__tabbed_13_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">ports</span><span class="p">:</span>
@@ -1398,14 +1427,12 @@
 <span class="p p-Indicator">-</span> <span class="nt">DNLA</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1900:1900/udp</span>
 <span class="p p-Indicator">-</span> <span class="nt">Discovery</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7359:7359/udp</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><label for="__tabbed_13_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;ports&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;WebUI&quot;</span><span class="p">:</span> <span class="s2">&quot;8096:8096/tcp&quot;</span><span class="p">,</span> <span class="nt">&quot;HTTPS WebUI&quot;</span><span class="p">:</span> <span class="s2">&quot;8920:8920/tcp&quot;</span><span class="p">,</span>  <span class="nt">&quot;DNLA&quot;</span><span class="p">:</span> <span class="s2">&quot;1900:1900/udp&quot;</span><span class="p">,</span> <span class="nt">&quot;Discovery&quot;</span><span class="p">:</span> <span class="s2">&quot;7359:7359/udp&quot;</span><span class="p">}]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1418,12 +1445,10 @@
   <span class="nt">&quot;network_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;host&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><label for="__tabbed_14_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">network_mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">host</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1443,12 +1468,11 @@
       <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span>
       <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span>
     <span class="p">},</span>
-      <span class="s2">&quot;container&quot;</span><span class="err">:</span> <span class="s2">&quot;/config&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;bind&quot;</span><span class="err">:</span> <span class="s2">&quot;app_config&quot;</span>
+      <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/config&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;app_config&quot;</span>
   <span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><label for="__tabbed_15_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
@@ -1459,14 +1483,12 @@
 <span class="p p-Indicator">-</span> <span class="nt">container</span><span class="p">:</span> <span class="s">&quot;/config&quot;</span>
   <span class="nt">bind</span><span class="p">:</span> <span class="s">&quot;app_config&quot;</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_15_3" name="__tabbed_15" type="radio" /><label for="__tabbed_15_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="err">/data</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/config&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;app_config&quot;</span><span class="p">}]</span>
+  <span class="nt">&quot;volumes&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="err">/da</span><span class="kc">ta</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;!downloads&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;/etc/localtime&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/config&quot;</span><span class="p">,</span> <span class="nt">&quot;bind&quot;</span><span class="p">:</span> <span class="s2">&quot;app_config&quot;</span><span class="p">}]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1483,20 +1505,17 @@
   <span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><label for="__tabbed_16_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">sysctls</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">net.ipv6.conf.all.disable_ipv6</span><span class="p">:</span> <span class="s">&#39;0&#39;</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_16_3" name="__tabbed_16" type="radio" /><label for="__tabbed_16_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;sysctls&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;net.ipv6.conf.all.disable_ipv6&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span> <span class="p">}</span> <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1511,20 +1530,17 @@
   <span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><label for="__tabbed_17_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">cap_add</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">NET_ADMIN</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_17_3" name="__tabbed_17" type="radio" /><label for="__tabbed_17_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;cap_add&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;NET_ADMIN&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1554,7 +1570,6 @@
   <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><label for="__tabbed_18_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
@@ -1569,14 +1584,12 @@
   <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This is a description</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">defaullt</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_18_3" name="__tabbed_18" type="radio" /><label for="__tabbed_18_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PUID&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">},{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;PGID&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">},{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;EnvWithDescription&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a description&quot;</span><span class="p">,</span><span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;default&quot;</span><span class="p">}]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1598,7 +1611,6 @@
 <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><label for="__tabbed_19_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">labels</span><span class="p">:</span>
@@ -1607,14 +1619,12 @@
 <span class="p p-Indicator">-</span> <span class="nt">label</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">local.yacht.otherlabel</span>
   <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">this is another label</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_19_3" name="__tabbed_19" type="radio" /><label for="__tabbed_19_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.yacht.label&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is a label&quot;</span><span class="p">},{</span><span class="nt">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;local.ycht.otherlabel&quot;</span><span class="p">,</span><span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;this is another label&quot;</span><span class="p">}]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1632,21 +1642,18 @@
   <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><label for="__tabbed_20_2">YAML</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">devices</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/dev/null</span>
   <span class="nt">container</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/dev/null</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_20_3" name="__tabbed_20" type="radio" /><label for="__tabbed_20_3">Single Line JSON</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;devices&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span><span class="p">,</span><span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="s2">&quot;/dev/null&quot;</span><span class="p">}]</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 </div>
@@ -1683,7 +1690,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../Installation/gettingstarted/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../Installation/macos/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1692,7 +1699,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started
+                MacOS
               </div>
             </div>
           </a>
@@ -1731,38 +1738,23 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="../../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
       
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
     
-  
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.0-beta.2/timeago.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.0-beta.2/timeago.locales.min.js"></script>
-          <script>
-          if (
-            typeof app !== "undefined" && 
-            typeof app.document$ !== "undefined"
-            ) {
-            app.document$.subscribe(function() {
-                var nodes = document.querySelectorAll('.timeago');
-                var locale = nodes[0].getAttribute('locale');
-                timeago.render(nodes, locale);
-            })
-         } else {
-             var nodes = document.querySelectorAll('.timeago');
-             var locale = nodes[0].getAttribute('locale');
-             timeago.render(nodes, locale);
-         }
-          </script>
-        </body>
+  </body>
 </html>
