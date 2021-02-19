@@ -14,6 +14,8 @@ nav:
     - 'Requirements' : 'Installation/requirements.md'
     - 'Install Yacht' : 'Installation/yacht.md'
     - 'Getting Started' : 'Installation/gettingstarted.md'
+    - 'ARM' : 'Installation/arm.md'
+    - 'MacOS' : 'Installation/macos.md'
   - Templates:
     - 'Templates Explained' : 'Templates/templates.md'
     - 'Template Variables' : 'Templates/variables.md'

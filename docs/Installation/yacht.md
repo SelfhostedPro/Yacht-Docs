@@ -31,20 +31,26 @@ Once it's installed you can use the button to open Yacht.
 
 ## via Docker Compose
 The following is an example docker-compose.yml file to deploy Yacht:
-```yaml linenums="1"
----
-version: '3'
-services:
-  yacht:
-    container_name: yacht
-    restart: unless-stopped
-    ports:
-      - 8000:8000
-    volumes:
-      - yacht:/config
-      - /var/run/docker.sock:/var/run/docker.sock
-    image: selfhostedpro/yacht
+!!! code "Installation"
 
-volumes:
-  yacht:
-```
+    === "docker-compose"
+      ```yaml linenums="1"
+      ---
+      version: '3'
+      services:
+        yacht:
+          container_name: yacht
+          restart: unless-stopped
+          ports:
+            - 8000:8000
+          volumes:
+            - yacht:/config
+            - /var/run/docker.sock:/var/run/docker.sock
+          image: selfhostedpro/yacht
+
+      volumes:
+        yacht:
+      ```
+
+## via DockSTARTer
+Yacht is available via DockSTARTer. More information on installing Yacht via DockSTARTer is available [here](https://dockstarter.com/).

@@ -6,3 +6,7 @@ To get started you can:
 2. Run `pip install mkdocs-material`
 3. Run `mkdocs serve` and you can access the preview at http://localhost:8000
 4. When you're done submit a PR and I'll check it out and merge it.
+
+Deploy instructions:
+1. `git remote add repo git@github.com:SelfhostedPro/Yacht.git`
+2. `mkdocs gh-deploy -r repo -b gh-pages -c`
