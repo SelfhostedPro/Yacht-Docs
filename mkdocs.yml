@@ -27,6 +27,9 @@ nav:
       - 'Images' : 'Pages/images.md'
     - 'Server Settings' : 'Pages/serverSettings.md'
     - 'User Settings' : 'Pages/userSettings.md'
+  - Projects (compose):
+    - 'Projects Explained' : 'Projects/explained.md'
+    - 'Advanced Projects' : 'Projects/advanced.md'
   - Advanced:
     - 'Reverse Proxy' : 'Advanced/proxy.md'
     - 'ARM (RPI)' : 'Advanced/arm.md'
