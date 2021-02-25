@@ -13,7 +13,7 @@ Create the config directory for the sqlite db:
 !!! code "Code"
     ```
     cd Yacht
-    mkdir config
+    mkdir backend/config
     ```
 ## Requirements
 
