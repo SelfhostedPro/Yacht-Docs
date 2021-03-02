@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'src/assets/images/favicon.ico',
+  favicon: '/img/favicon.ico',
   organizationName: 'SelfhostedPro', // Usually your GitHub org/user name.
   projectName: 'Yacht', // Usually your repo name.
   themeConfig: {
@@ -13,8 +13,8 @@ module.exports = {
       title: 'Yacht',
       logo: {
         alt: 'Yacht Logo',
-        src: 'src/assets/images/logo-light.svg',
-        srcDark: 'src/assets/images/logo.svg'
+        src: '/img/logo-light.svg',
+        srcDark: '/img/logo.svg'
       },
       items: [
         {

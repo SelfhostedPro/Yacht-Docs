@@ -32,3 +32,7 @@ html[data-theme='light'] {
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
+
+.navbar-sidebar {
+  max-width: 30%;
+}
