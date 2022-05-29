@@ -39,6 +39,6 @@ From the "View Templates" page you can also click on the 3 dots and from there y
 ## Deploying from a Template
 Now that you have a template added let's deploy an application. Click on your template to view it. Then pick an app to deploy. You can click on view to see any details about the application.
 
-One you've got an app in mind click on deploy and you'll be taken to the deploy form. Everything should be filled out for you but double check that everything looks correct. Click on continue until you get to the last page and then click on Deploy.
+Once you've got an app in mind click on deploy and you'll be taken to the deploy form. Everything should be filled out for you but double check that it all looks correct. Click on continue until you get to the last page and then click on Deploy.
 
 Now you'll see your running app. You can click on it to view more detailed stats or click on the Arrow to the right of the name to perform an action with it.
