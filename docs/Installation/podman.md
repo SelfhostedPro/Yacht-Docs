@@ -11,5 +11,5 @@ Yacht is compatible with podman. In order to run a Yacht container in podman you
 
 ```bash
 podman volume create yacht
-podman run -v /var/run/podman/podman.sock:/var/run/docker.sock -v yacht:/config -p 8000:8000 --name -d ghcr.io/selfhostedpro/yacht:latest
+podman run -v /var/run/podman/podman.sock:/var/run/docker.sock -v yacht:/config -p 8000:8000 --name yacht -d ghcr.io/selfhostedpro/yacht:latest
 ```
