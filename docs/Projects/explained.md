@@ -15,10 +15,8 @@ Yacht uses docker-compose via the sh submodule for python so it supports the lat
 # Docker Compose Folder Structure:
 The following is an example folder structure:
 
-!!! code "Folder Structure"
-
-    ``` bash
-    compose
+```bash
+ compose
     ├── docker-pulls                ### Project Folder###
     │   ├── Docker_Hub_Stats.json
     │   ├── README.md
@@ -30,7 +28,8 @@ The following is an example folder structure:
     │   └── prometheus.yml
     ├── opendistro                  ### Project Folder
         └── docker-compose.yml      ### docker-compose.yml ###
-    ```
+```
+
 The way this works is the Project will be named the same as the project folder. Inside of the project folder you can put the docker-compose.yml file as well as any other files you need to pass through.
 
 These will be seen by Yacht and you'll be able to control the projects, as well as the services within them. When you view a project, the docker-compose file is parsed and you'll see all of the details of the project.
