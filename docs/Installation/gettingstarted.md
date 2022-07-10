@@ -11,7 +11,7 @@ Running Yacht is as simple as running the following two commands:
 
 ```bash
 docker volume create yacht
-docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config selfhostedpro/yacht
+docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config --name yacht --restart-policy unless-stopped selfhostedpro/yacht
 ```
 
 After that you can access Yacht on port 8000 on your server in a web browser.
