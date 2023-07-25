@@ -1,7 +1,7 @@
 module.exports = {
     title: "Yacht",
     tagline: "A container management UI with a focus on templates and 1-click deployments.",
-    url: "https://yach.sh",
+    url: "https://dev.yacht.sh",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
