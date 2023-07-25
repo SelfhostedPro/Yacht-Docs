@@ -40,3 +40,4 @@ https://yangkghjh.github.io/selfhosted_store/unraid/templates/yacht/yacht.json
 ```
 
 In templates you are able to define variables (starting with `!`) to have them automatically replaced by whatever variable the user has set in their server settings (ie. `!config` will be replaced by `/yacht/AppData/Config` by default).
+ 
