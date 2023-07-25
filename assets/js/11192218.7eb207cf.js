@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkyacht_docs=self.webpackChunkyacht_docs||[]).push([[8357],{3318:a=>{a.exports=JSON.parse('{"label":"information","permalink":"/blog/tags/information","allTagsPath":"/blog/tags","count":1}')}}]);

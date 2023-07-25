@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkyacht_docs=self.webpackChunkyacht_docs||[]).push([[1713],{3457:a=>{a.exports=JSON.parse('[{"label":"misc","permalink":"/blog/tags/misc","count":1},{"label":"information","permalink":"/blog/tags/information","count":1},{"label":"info","permalink":"/blog/tags/info","count":1}]')}}]);
