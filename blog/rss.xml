@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Yacht Blog</title>
-        <link>https://yach.sh/blog</link>
+        <link>https://dev.yacht.sh/blog</link>
         <description>Yacht Blog</description>
         <lastBuildDate>Mon, 01 Mar 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Welcome]]></title>
-            <link>https://yach.sh/blog/welcome</link>
-            <guid>https://yach.sh/blog/welcome</guid>
+            <link>https://dev.yacht.sh/blog/welcome</link>
+            <guid>https://dev.yacht.sh/blog/welcome</guid>
             <pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to Yacht's new documentation. It's built with Docusaurusv2 which uses react to build out the documentation, blog, and main website. I'll be posting updated about new features, releases, and tutorials as I'm able to.]]></description>
             <content:encoded><![CDATA[<p>Welcome to Yacht's new documentation. It's built with <a href="https://v2.docusaurus.io/" target="_blank" rel="noopener noreferrer"><strong>Docusaurusv2</strong></a> which uses react to build out the documentation, blog, and main website. I'll be posting updated about new features, releases, and tutorials as I'm able to.</p><p>If you run into any trouble please check out the <a href="https://discord.gg/KpKutvC" target="_blank" rel="noopener noreferrer"><strong>SelfhostedPro Discord Server</strong></a> and post in the <strong>#tech-support</strong> or <strong>#yacht-support</strong> channel.</p>]]></content:encoded>
