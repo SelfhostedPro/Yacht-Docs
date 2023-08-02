@@ -10,9 +10,10 @@ slug: /
 
 A web interface for managing docker containers with an emphasis on templating to provide one-click deployments of dockerized applications. Think of it like a decentralized app store for servers that anyone can make packages for.
 
-## Features
+Additional support and community assistance can be found in our Discord group, https://discord.gg/JfsebxqKDW
 
-- Container templating compatibility (Portainer compatible)
+
+## Features- Container templating compatibility (Portainer compatible)
 - Basic container management
 - Easy template updating
 - Template Variables to allow for a one-click experience
