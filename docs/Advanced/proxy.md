@@ -4,13 +4,26 @@ description: Reverse proxy setup instructions
 hide_table_of_contents: true
 id: Proxy
 ---
-To put Yacht behind a reverse proxy you'll need to enable websockets support as Logs, Stats, and the Dashboard use websockets.
+Putting Yacht behind a webproxy is easy, we recommend the following setup.
 
-- In Nginx Proxy Manager this is done by enabling "Websockets Support".
-- For a standard nginx setup you'll need to add the following to your Yacht location block:
+Using the container or setup from: https://github.com/NginxProxyManager/nginx-proxy-manager
 
-  ```conf
-  proxy_http_version 1.1;
-  proxy_set_header Upgrade $http_upgrade;
-  proxy_set_header Connection "Upgrade";
-  ```
+The following configuration: 
+
+- Used to "websocket support was required", this is no longer true. It is recommended but Yacht will work without it. 
+- Using a subdomain such as "yacht.domain.com"
+- Using https and forcing SSL
+- Set the Yacht container to bridged network
+- Leave Nginx Proxy Manager on its default proxy network.
+
+Configure Nginx using the subdomain. 
+- The IP of the docker host (such as 192.168.0.x or equiv.).
+- The docker port you set Yacht to such as 8000.
+- Use http between the Nginx host and the Yacht container. 
+
+Additional security:
+- Limit your firewall access to allow communication from Yacht to Nginx host on specified port only. 
+- Your have to research this and lock down your firewall your self, we can not provide support for this. 
+
+![proxy_screenshot.png](proxy_screenshot.png)
+![proxy_screenshot2.png](proxy_screenshot2.png)
