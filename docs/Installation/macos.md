@@ -11,7 +11,7 @@ MacOS will throw errors about being unable to access the docker socket (`/var/ru
 Here's an example docker-compose:
 
 ```yaml title="docker-compose.yml"
-version: '3'
+version: '3.9'
 services:
   yacht:
     container_name: yacht
@@ -26,9 +26,10 @@ services:
       - PUID=0
       - PGID=0
       - COMPOSE_DIR=/compose
-    image: selfhostedpro/yacht
+    image: selfhostedpro/yacht:latest
 volumes:
   yacht:
+```
 ```
 
 *Please note that the above docker-compose sets up a compose directory for managing compose projects. You'll need to change the paths to fit your system or remove these if you're not going to be using docker-compose*

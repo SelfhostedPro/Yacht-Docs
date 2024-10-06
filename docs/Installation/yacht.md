@@ -38,13 +38,13 @@ The following is an example docker-compose.yml file to deploy Yacht:
 
 ```yaml title="docker-compose.yml"
 ---
-version: "3"
+version: "3.9"
 services:
   yacht:
     container_name: yacht
     restart: unless-stopped
     ports:
-      - 8000:8000
+      - "8000:8000"
     volumes:
       - yacht:/config
       - /var/run/docker.sock:/var/run/docker.sock
@@ -52,6 +52,7 @@ services:
 
 volumes:
   yacht:
+```
 ```
 
 ## via DockSTARTer
