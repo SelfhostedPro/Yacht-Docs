@@ -207,7 +207,7 @@ This is what is displayed when in the apps list page. Punctuation is nice here a
 name: app_name
 ```
 </TabItem>
-</Tabs>;
+</Tabs>
 
 This is what the actual container is named. Information on this is [here](https://docs.docker.com/engine/reference/run/#name---name).
 
@@ -818,6 +818,6 @@ devices:
 }
 ```
 </TabItem>
-</Tabs>;
+</Tabs>
 
 Devices allow devices to be passed through containers for things like transcoding.
